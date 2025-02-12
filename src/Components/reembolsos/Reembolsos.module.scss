@@ -1,0 +1,131 @@
+header {
+    display: flex;
+    border: solid red;
+    width: 9vw;
+    height: 5vh;
+    justify-content: space-between;
+    align-items: center;
+    font-family: Inter, serif;
+
+    p {
+        font-size: 1rem;
+        font-weight: 400;
+    }
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90vw;
+    height: 90vh;
+    gap: 16px;
+    border: solid green;
+
+    h1 {
+        display: flex;
+        align-self: flex-start;
+        margin-left: 230px;
+    }
+
+    .pMain {
+        display: flex;
+        align-self: flex-start;
+        margin-left: 230px;
+    }
+
+
+    .Cards {
+        //border: solid blue;
+        display: flex;
+        justify-content: space-between;
+        width: 60vw;
+
+    }
+
+    .Card1 {
+        width: 18vw;
+        height: 25vh;
+        border: solid lightgray;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .Card2 {
+        width: 18vw;
+        height: 25vh;
+        border: solid lightgray;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .Card3 {
+        width: 18vw;
+        height: 25vh;
+        border: solid lightgray;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .Indicadores {
+        border: solid orange;
+        width: 60vw;
+        height: 12vh;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        //background-color: black;
+
+
+        .ind1 {
+            display: flex;
+        }
+
+        .img1 {
+            background-color: #00BEDD;
+            border: solid #00BEDD;
+            height: 3.5vh;
+            width: 1.8vw;
+        }
+
+        .ind2 {
+            display: flex;
+        }
+
+        .img2 {
+            background-color: black;
+            border: solid #00BEDD;
+            height: 3.5vh;
+            width: 1.8vw;
+        }
+
+        .ind3 {
+            display: flex;
+        }
+
+        .img3 {
+            background-color: #00BEDD;
+            border: solid #00BEDD;
+            height: 3.5vh;
+            width: 1.8vw;
+        }
+
+        .ind4 {
+            display: flex;
+        }
+
+        .img4 {
+            background-color: #00BEDD;
+            border: solid #00BEDD;
+            height: 3.5vh;
+            width: 1.8vw;
+        }
+    }
+}
