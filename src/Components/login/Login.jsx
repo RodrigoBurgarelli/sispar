@@ -26,8 +26,8 @@ export default function Login() {
                     placeholder="Senha" />
                     <a href="">Esqueci minha senha</a>
                     <div className= {styles.buttonGroup}>
-                        <button>Entrar</button>
-                        <button>Criar conta</button>
+                        <button className={styles.containerEntrar}>Entrar</button>
+                        <button className={styles.containerCriar}>Criar conta</button>
                     </div>
                 </form>
 
