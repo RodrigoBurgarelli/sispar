@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import styles from "./Reembolsos.module.scss";
 import Home from "../../assets/Dashboard/home header.png"
 import Seta from "../../assets/Dashboard/Vector.png"
@@ -10,6 +11,13 @@ import Sistema from "../../assets/Dashboard/Sistema-atualizado.png"
 import SolicitarHistorico from "../../assets/Dashboard/Solicitar - Histórico.png"
 import SolicitarReembolso from "../../assets/Dashboard/Solicitar - Reembolso.png"
 export default function Reembolsos() {
+    const navigate = useNavigate() 
+
+    const irParaSolicitacao = () => {
+        navigate("/solicitacao")
+    }
+    
+    
     return (
         <>
             <header>
@@ -18,11 +26,11 @@ export default function Reembolsos() {
                 <p>Reembolsos</p>
             </header>
 
-            <main>
+            <main className={styles.mainReembolsos}>
                 <h1>Sistema de Reembolsos</h1>
                 <p className={styles.pMain}>Solicite novos pedidos de reembolso, visualize solicitações em análise e todo o histórico.</p>
                 <section className={styles.Cards}>
-                    <article className={styles.Card1}>
+                    <article onClick={irParaSolicitacao} className={styles.Card1}>
                         <img src={SolicitarReembolso} alt="Solicitar Reembolso" />
                         <p>Solicitar Reembolso</p>
                     </article>
@@ -35,29 +43,37 @@ export default function Reembolsos() {
                         <p>Histórico</p>
                     </article>
                 </section>
-                
+
                 <section className={styles.Indicadores}>
-                <article className={styles.ind1}>
-                    <img className={styles.img1} src={NumeroSolicitados} alt="Número de solicitações" />
-                    <p>182</p>
-                    <p>Solicitados</p>
-                </article>
-                    <article className={styles.ind2}>
-                         <img src={NumeroAnalises} alt="Número de análises" />
-                         <p>74</p>
-                         <p>Em análise</p>
+                    <article className={styles.ind1}>
+                        
+                            <img className={styles.bInd1} src={NumeroSolicitados} alt="Número de solicitações" />
+                        
+                        <h3>182</h3>
+                        <p>Solicitados</p>
                     </article>
-                   <article className={styles.ind3}>
-                    <img src={NumeroAprovados} alt="Número de aprovados" />
-                    <p>19</p>
+                    <article className={styles.ind2}>
+                        
+                            <img className={styles.bInd2} src={NumeroAnalises} alt="Número de análises" />
+                       
+                        <h3>74</h3>
+                        <p>Em análise</p>
+                    </article>
+                    <article className={styles.ind3}>
+                    
+                        <img className={styles.bInd3} src={NumeroAprovados} alt="Número de aprovados" />
+                       
+                        <h3>19</h3>
                         <p>Aprovados</p>
-                   </article>
+                    </article>
                     <article className={styles.ind4}>
-                        <img src={NumeroRejeitados} alt="Número de Rejeitados" />
-                        <p>41</p>
+                    
+                        <img className={styles.bInd4} src={NumeroRejeitados} alt="Número de Rejeitados" />
+                        
+                        <h3>41</h3>
                         <p>Rejeitados</p>
                     </article>
-                    
+
 
                 </section>
                 <section className={styles.sistemaAtualizado}>

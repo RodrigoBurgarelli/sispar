@@ -1,6 +1,6 @@
 header {
     display: flex;
-    border: solid red;
+    //border: solid red;
     width: 9vw;
     height: 5vh;
     justify-content: space-between;
@@ -13,26 +13,30 @@ header {
     }
 }
 
-main {
+.mainReembolsos {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 90vw;
-    height: 90vh;
-    gap: 16px;
-    border: solid green;
+    height: 95vh;
+    gap: 8px;
+    //border: solid green;
 
     h1 {
         display: flex;
         align-self: flex-start;
-        margin-left: 230px;
+        margin-left: 14.5rem;
+        font-size: 2rem;
+        font-weight: 700;
     }
 
     .pMain {
         display: flex;
         align-self: flex-start;
-        margin-left: 230px;
+        margin-left: 14.5rem;
+        font-size: 1rem;
+        font-weight: 400;
     }
 
 
@@ -41,6 +45,13 @@ main {
         display: flex;
         justify-content: space-between;
         width: 60vw;
+        margin-top: 1rem;
+
+        p {
+            font-size: 1.313rem;
+            font-weight: 700;
+
+        }
 
     }
 
@@ -52,6 +63,9 @@ main {
         align-items: center;
         flex-direction: column;
         justify-content: center;
+        border-radius: 6px;
+        border-width: 0.8px;
+        gap: 8px;
     }
 
     .Card2 {
@@ -62,6 +76,9 @@ main {
         align-items: center;
         flex-direction: column;
         justify-content: center;
+        border-radius: 6px;
+        border-width: 0.8px;
+        gap: 8px;
     }
 
     .Card3 {
@@ -72,60 +89,99 @@ main {
         align-items: center;
         flex-direction: column;
         justify-content: center;
+        border-radius: 6px;
+        border-width: 0.8px;
+        gap: 8px;
     }
 
     .Indicadores {
-        border: solid orange;
+        border: solid lightgray;
         width: 60vw;
         height: 12vh;
         display: flex;
         align-items: center;
-        justify-content: space-between;
-        //background-color: black;
+        justify-content: space-evenly;
+        border-radius: 6px;
+        border-width: 0.8px;
+        margin-top: 1rem;
+
+        p {
+            font-size: 1rem;
+            font-weight: 400;
+        }
+
+        h3 {
+            font-size: 1rem;
+            font-weight: 700;
+        }
 
 
         .ind1 {
             display: flex;
+            align-items: center;
+            gap: 8px;
         }
 
-        .img1 {
+        .bInd1 {
             background-color: #00BEDD;
-            border: solid #00BEDD;
-            height: 3.5vh;
-            width: 1.8vw;
+            height: 4.5vh;
+            border: none;
+            width: 2vw;
+            border-radius: 6px;
+            padding: 6px;
         }
 
         .ind2 {
             display: flex;
+            align-items: center;
+            gap: 8px;
         }
 
-        .img2 {
-            background-color: black;
-            border: solid #00BEDD;
-            height: 3.5vh;
-            width: 1.8vw;
+        .bInd2 {
+            background-color: #E56700;
+            height: 4.5vh;
+            border: none;
+            width: 2vw;
+            border-radius: 6px;
+            padding: 6px;
         }
 
         .ind3 {
             display: flex;
+            align-items: center;
+            gap: 8px;
         }
 
-        .img3 {
-            background-color: #00BEDD;
-            border: solid #00BEDD;
-            height: 3.5vh;
-            width: 1.8vw;
+        .bInd3 {
+            background-color: #007A6A;
+            height: 4.5vh;
+            border: none;
+            width: 2vw;
+            border-radius: 6px;
+            padding: 6px;
         }
 
         .ind4 {
             display: flex;
+            align-items: center;
+            gap: 8px;
         }
 
-        .img4 {
-            background-color: #00BEDD;
-            border: solid #00BEDD;
-            height: 3.5vh;
-            width: 1.8vw;
+        .bInd4 {
+            background-color: #A60B2F;
+            height: 4.5vh;
+            border: none;
+            width: 2vw;
+            border-radius: 6px;
+            padding: 6px;
         }
+    }
+
+    .sistemaAtualizado {
+        display: flex;
+        align-self: flex-start;
+        margin-left: 230px;
+        gap: 8px;
+        margin-top: 16px;
     }
 }
