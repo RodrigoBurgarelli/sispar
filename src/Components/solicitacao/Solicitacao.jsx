@@ -17,8 +17,9 @@ export default function Solicitacao() {
             <p>Solicitação de Reembolsos</p>
         </header>
         <main>
-            
+
         </main>
+        </div>
         </div>
     );
 }
