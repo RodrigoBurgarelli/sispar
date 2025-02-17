@@ -1,4 +1,8 @@
-header {
+.divGeral {
+    display: flex;
+}
+
+.headerReembolsos {
     display: flex;
     //border: solid red;
     width: 9vw;
@@ -18,27 +22,24 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 90vw;
+    width: 95vw;
     height: 95vh;
     gap: 8px;
     //border: solid green;
 
-    h1 {
-        display: flex;
-        align-self: flex-start;
-        margin-left: 14.5rem;
-        font-size: 2rem;
-        font-weight: 700;
-    }
+    .divMain {
+        width: 63%;
 
-    .pMain {
-        display: flex;
-        align-self: flex-start;
-        margin-left: 14.5rem;
-        font-size: 1rem;
-        font-weight: 400;
-    }
+        h1 {
+            font-size: 2rem;
+            font-weight: 700;
+        }
 
+        .pMain {
+            font-size: 1rem;
+            font-weight: 400;
+        }
+    }
 
     .Cards {
         //border: solid blue;
@@ -97,7 +98,7 @@ header {
     .Indicadores {
         border: solid lightgray;
         width: 60vw;
-        height: 12vh;
+        height: 10vh;
         display: flex;
         align-items: center;
         justify-content: space-evenly;
@@ -124,7 +125,7 @@ header {
 
         .bInd1 {
             background-color: #00BEDD;
-            height: 4.5vh;
+            height: 4vh;
             border: none;
             width: 2vw;
             border-radius: 6px;
@@ -139,7 +140,7 @@ header {
 
         .bInd2 {
             background-color: #E56700;
-            height: 4.5vh;
+            height: 4vh;
             border: none;
             width: 2vw;
             border-radius: 6px;
@@ -154,7 +155,7 @@ header {
 
         .bInd3 {
             background-color: #007A6A;
-            height: 4.5vh;
+            height: 4vh;
             border: none;
             width: 2vw;
             border-radius: 6px;
@@ -169,7 +170,7 @@ header {
 
         .bInd4 {
             background-color: #A60B2F;
-            height: 4.5vh;
+            height: 4vh;
             border: none;
             width: 2vw;
             border-radius: 6px;
@@ -179,9 +180,10 @@ header {
 
     .sistemaAtualizado {
         display: flex;
-        align-self: flex-start;
-        margin-left: 230px;
+        //align-self: flex-start;
+        //margin-left: 230px;
         gap: 8px;
         margin-top: 16px;
+        width: 64%;
     }
 }

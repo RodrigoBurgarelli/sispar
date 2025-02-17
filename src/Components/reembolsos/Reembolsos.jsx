@@ -10,6 +10,8 @@ import NumeroSolicitados from "../../assets/Dashboard/Solicitados.png"
 import Sistema from "../../assets/Dashboard/Sistema-atualizado.png"
 import SolicitarHistorico from "../../assets/Dashboard/Solicitar - Histórico.png"
 import SolicitarReembolso from "../../assets/Dashboard/Solicitar - Reembolso.png"
+import NavBar from "../navibar/NavBar.jsx";
+
 export default function Reembolsos() {
     const navigate = useNavigate() 
 
@@ -19,16 +21,20 @@ export default function Reembolsos() {
     
     
     return (
-        <>
-            <header>
+        <div className={styles.divGeral}>
+        <NavBar />
+        <div>
+            <header className={styles.headerReembolsos}>
                 <img src={Home} alt="Casinha da header" />
                 <img src={Seta} alt="Setinha da header" />
                 <p>Reembolsos</p>
             </header>
 
             <main className={styles.mainReembolsos}>
+                <div className={styles.divMain}>
                 <h1>Sistema de Reembolsos</h1>
                 <p className={styles.pMain}>Solicite novos pedidos de reembolso, visualize solicitações em análise e todo o histórico.</p>
+                </div>
                 <section className={styles.Cards}>
                     <article onClick={irParaSolicitacao} className={styles.Card1}>
                         <img src={SolicitarReembolso} alt="Solicitar Reembolso" />
@@ -83,6 +89,7 @@ export default function Reembolsos() {
 
 
             </main>
-        </>
+            </div>
+        </div>
     );
 }
