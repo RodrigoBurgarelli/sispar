@@ -20,7 +20,7 @@ export default function Login() {
                 <img src={Logo} alt="Logo Wilson Sons" />
                 <h1>Boas vindas ao Novo Portal SISPAR</h1>
                 <p>Sistema de Emissão de Boletos e Parcelamento</p>
-                <form action="">
+                <form className={styles.formLogin} action="">
                     <input
                         type="email"
                         name="Email"

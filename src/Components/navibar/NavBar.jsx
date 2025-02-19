@@ -21,13 +21,13 @@ export default function NavBar() {
             <section>
                 <img src={Perfil} alt="imagem de perfil" />
                 <div className={styles.boxButton}>
-                    <button onClick={()=>{navigate("/reembolso")}}>
+                    <button onClick={()=>{navigate("/reembolsos")}}>
                         <img src={Home} alt="botão home" />
                     </button>
                     <button onClick={()=>{navigate("/solicitacao")}}>
                         <img src={Reembolso} alt="botão de reembolso" />
                     </button>
-                    <button onClick={()=>{navigate("/reembolso")}}>
+                    <button onClick={()=>{navigate("/reembolsos")}}>
                         <img src={Pesquisa} alt="botão de pesquisa" />
                     </button>
                     <button onClick={()=>{navigate("/solicitacao")}}>
