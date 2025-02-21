@@ -36,7 +36,7 @@ justify-content: space-between;
 input, select, textarea{
     border-radius: 6px;
     border: solid #CBD4E1 0.8px;
-    height: 4vh;
+    height: 5vh;
     width: 100%;
 }
 
@@ -47,13 +47,14 @@ label{
 }
 
 textarea{
-    height: 10vh;
+    height: 8vh;
 }
 
 //estilização do Grupo1
 .grupo1{
-border: solid;
+//border: solid;
 width: 35%;
+height: 22vh;
 display: flex;
 flex-wrap: wrap;
 align-items: center;
@@ -83,12 +84,86 @@ justify-content: space-between;
 .barraVertical{
     width: 0.1vw;
     border: solid #CBD4E1 1px;
-    height: 25vh;
+    height: 20vh;
 }
 
 //estilização do grupo2
 .grupo2{
-    border: solid red;
-    width: 64%;
-    height: 25vh;
+    //border: solid red;
+    width: 62%;
+    height: 22vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    
+
+}
+
+.inputData{
+width: 20%;
+}
+
+.inputTipoDespesas{
+width: 31%;
+}
+
+.inputCentroCustos{
+width: 45%;
+}
+
+.inputOrdInt{
+width: 7.5%;
+}
+
+.inputDiv{
+    width: 7.5%;
+}
+
+.inputPep{
+    width: 7.5%;
+}
+
+.inputMoeda{
+    width: 11%;
+}
+
+.inputDist{
+    width: 8%;
+}
+
+.inputValor{
+    width: 11%;
+}
+
+.inputValFaturado{
+    width: 12%;
+}
+
+.inputDespesa{
+    width: 11%;
+}
+
+.buttonG2{
+width: 17%;
+display: flex;
+justify-content: flex-end;
+gap: 0.5rem;
+margin-top: 1rem;
+
+.buttonSalvar{
+height: 5vh;
+width: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+background-color: #001A3D;
+color: #FFFFFF;
+}
+
+.buttonApagar{
+height: 5vh;
+width: 28%;
+background-color: #00BEDD;
+}
 }
