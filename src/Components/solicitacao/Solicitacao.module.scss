@@ -24,6 +24,9 @@
 
 .mainSolicitacao{
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 .formSolicitacao{
 width: 100%;
@@ -153,17 +156,21 @@ margin-top: 1rem;
 
 .buttonSalvar{
 height: 5vh;
-width: 50%;
+width: 60%;
 display: flex;
 align-items: center;
 justify-content: center;
 background-color: #001A3D;
 color: #FFFFFF;
+font-weight: 700;
+font-size: 1rem;
+font-family: Inter;
+gap: 6px;
 }
 
 .buttonApagar{
 height: 5vh;
-width: 28%;
+width: 30%;
 background-color: #00BEDD;
 }
 .buttonApagar:hover{
@@ -171,16 +178,33 @@ background-color: #00BEDD;
 }
 }
 .grupo3Tabela{
-    border: solid purple;
+    border: solid #f1f4f9 0.8px;
     width: 100%;
-    height: 56vh;
+    height: 52vh;
+    margin-top: 0.5rem;
+     
+}
+table{
+    width: 100%;
+    border-collapse: collapse;
 }
 
+th{
+    background-color: #cbd4e1;
+    font-weight: 400;
+    font-size: 1rem;
+    
+}
+
+td, th{
+border: solid #f1f4f9 0.8px;
+text-align: center;
+}
 
 .rodapeMain{
-    border: solid pink;
+    //border: solid pink;
     width: 100%;
-    height: 16vh;
+    height: 15vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -220,6 +244,7 @@ background-color: #00BEDD;
     color: #FFFFFF;
     font-weight: 700;
     font-size: 1rem;
+    gap: 6px;
 }
 
 .bCancel{
@@ -233,5 +258,6 @@ background-color: #00BEDD;
     font-weight: 700;
     font-size: 1rem;
     font-family: Inter;
+    gap: 6px;
 }
 }

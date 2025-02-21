@@ -82,22 +82,30 @@ export default function Solicitacao() {
 
                             <div className={styles.inputOrdInt}>
                                 <label htmlFor="">Ord. Int.</label>
-                                <input type="text" name="" id="" />
+                                <input type="number" name="" id="" maxLength={4} />
                             </div>
 
                             <div className={styles.inputDiv}>
                                 <label htmlFor="">Div.</label>
-                                <input type="text" name="" id="" />
+                                <input type="number" name="" id="" maxLength={3} />
                             </div>
 
                             <div className={styles.inputPep}>
                                 <label htmlFor="">PEP</label>
-                                <input type="text" name="" id="" />
+                                <input type="number" name="" id="" />
                             </div>
 
                             <div className={styles.inputMoeda}>
                                 <label htmlFor="">Moeda</label>
-                                <input type="text" />
+                                <select name="" id="">
+                                    <option value="">Selecionar</option>
+                                    <option value="">BRA</option>
+                                    <option value="">ARS</option>
+                                    <option value="">USD</option>
+                                    <option value="">EUR</option>
+                                    <option value="">GBP</option>
+                                    <option value="">CNH</option>
+                                </select>
                             </div>
 
                             <div className={styles.inputDist}>
@@ -107,17 +115,17 @@ export default function Solicitacao() {
 
                             <div className={styles.inputValor}>
                                 <label htmlFor="">Valor / Km</label>
-                                <input type="text" name="" id="" />
+                                <input type="number" name="" id="" />
                             </div>
 
                             <div className={styles.inputValFaturado}>
                                 <label htmlFor="">Val. Faturado</label>
-                                <input type="text" name="" id="" />
+                                <input type="number" name="" id="" />
                             </div>
 
                             <div className={styles.inputDespesa}>
                                 <label htmlFor="">Despesa</label>
-                                <input type="text" name="" id="" />
+                                <input type="number" name="" id="" />
                             </div>
 
                             <div className={styles.buttonG2}>
@@ -133,7 +141,51 @@ export default function Solicitacao() {
 
 
                     </form>
+
+
                     <div className={styles.grupo3Tabela}>
+                        <table>
+                            <thead>
+                                <tr>
+                                <th></th>
+                                <th>Colaborador(a)</th>
+                                <th>Empresa</th>
+                                <th>Nº Prest.</th>
+                                <th>Data</th>
+                                <th>Motivo</th>
+                                <th>Tipo de despesa</th>
+                                <th>Ctr. Custo</th>
+                                <th>Ord. Int.</th>
+                                <th>Div.</th>
+                                <th>PEP</th>
+                                <th>Moeda</th>
+                                <th>Dist. Km</th>
+                                <th>Val. km</th>
+                                <th>Valor Faturado</th>
+                                <th>Despesa</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                   <td><img src={Lixeira} alt="ícone da lixeira" /></td>
+                                   <td>Vitor Carvalho</td>
+                                   <td>WSS001</td>
+                                   <td>329456</td>
+                                   <td>08/01/2025</td>
+                                   <td><img src={Motivo} alt="icone motivo" /></td>
+                                   <td>Desp. de viagem</td>
+                                   <td>1100110002 - Fin</td>
+                                   <td>0003</td>
+                                   <td>002</td>
+                                   <td>001</td>
+                                   <td>BRL</td>
+                                   <td>434km</td>
+                                   <td>0.65</td>
+                                   <td>242.10</td>
+                                   <td>40.05</td>
+                                </tr>
+                            </tbody>
+                        </table>
 
                     </div>
                     <div className={styles.rodapeMain}>
