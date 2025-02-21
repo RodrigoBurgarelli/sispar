@@ -35,7 +35,7 @@ export default function NavBar() {
                     </button>
                 </div>
             </section>
-            <button onClick={()=>{navigate("/")} }className={styles.buttonSair}>
+            <button nameClass={styles.buttonSairNav} onClick={()=>{navigate("/")} }className={styles.buttonSair}>
                 <img src={Sair} alt="imagem sair" />
             </button>
         </nav>

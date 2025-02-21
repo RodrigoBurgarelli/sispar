@@ -73,8 +73,8 @@ export default function Solicitacao() {
                             <div className={styles.inputCentroCustos}>
                                 <label htmlFor="">Centro de Custos</label>
                                 <select name="" id="">
-                                   <option value="">Selecionar</option>
-                                   <option value="">1100109002 - FIN CONTROLES INTERNOS MTZ</option>
+                                    <option value="">Selecionar</option>
+                                    <option value="">1100109002 - FIN CONTROLES INTERNOS MTZ</option>
                                     <option value="">1100110002 - FIN VICE-PRESIDENCIA FINANCAS MTZ</option>
                                     <option value="">1100110102 - FIN CONTABILIDADE MTZ</option>
                                 </select>
@@ -122,16 +122,47 @@ export default function Solicitacao() {
 
                             <div className={styles.buttonG2}>
                                 <button className={styles.buttonSalvar}>
-                                    <img src="" alt="" />
+                                    <img src={Mais} alt="" />
                                     <p>Salvar</p>
                                 </button>
                                 <button className={styles.buttonApagar}>
-                                    <img src="" alt="" />
+                                    <img src={Deletar} alt="" />
                                 </button>
                             </div>
                         </div>
 
+
                     </form>
+                    <div className={styles.grupo3Tabela}>
+
+                    </div>
+                    <div className={styles.rodapeMain}>
+                        <div className={styles.espacoBranco}></div>
+                        
+                        <div className={styles.mRodape1}>
+                            <div className={styles.inputTotalFat}>
+                                <label htmlFor="">Total Faturado</label>
+                                <input type="text" />
+                            </div>
+                            <div className={styles.inputTotalDespesa}>
+                                <label htmlFor="">Total Despesa</label>
+                                <input type="text" />
+                            </div>
+                        </div>
+                        <div className={styles.mRodape2}>
+                      
+                            <button className={styles.bEnviar}>
+                                <img src={Check} alt="" />
+                                <p>Enviar para Análise</p>
+                            </button>
+                            <button className={styles.bCancel}>
+                                <img src={Xs} alt="" />
+                                <p>Enviar para Análise</p>
+                            </button>
+                            </div>
+                        
+
+                    </div>
 
 
                 </main>

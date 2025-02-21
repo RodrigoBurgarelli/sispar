@@ -24,10 +24,7 @@
             justify-content: space-evenly;
             align-items: center;
         }
-    }
-
-
-
+    }    
 }
 
 button {
@@ -36,9 +33,19 @@ button {
     border-radius: 6px;
     background-color: #0844C4;
     border: none;
+
+}
+
+button:hover{
+    background-color: #073DB0;
+
 }
 
 .buttonSair {
     background-color: #63758D;
-    ;
+    
+    
+}
+.buttonSair:hover{
+    background-color: #63758D;
 }
