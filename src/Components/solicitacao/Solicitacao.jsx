@@ -59,7 +59,7 @@ export default function Solicitacao() {
                                 <label htmlFor="">Tipo de Despesa</label>
 
                                 <select name="" id="">
-                                    <option value="">Selecionar</option>
+                                    <option value="" disabled selected>Selecionar</option>
                                     <option value="">Alimentação</option>
                                     <option value="">Combustível</option>
                                     <option value="">Condução</option>
@@ -73,7 +73,7 @@ export default function Solicitacao() {
                             <div className={styles.inputCentroCustos}>
                                 <label htmlFor="">Centro de Custos</label>
                                 <select name="" id="">
-                                    <option value="">Selecionar</option>
+                                    <option value="" disabled selected>Selecionar</option>
                                     <option value="">1100109002 - FIN CONTROLES INTERNOS MTZ</option>
                                     <option value="">1100110002 - FIN VICE-PRESIDENCIA FINANCAS MTZ</option>
                                     <option value="">1100110102 - FIN CONTABILIDADE MTZ</option>
@@ -98,7 +98,7 @@ export default function Solicitacao() {
                             <div className={styles.inputMoeda}>
                                 <label htmlFor="">Moeda</label>
                                 <select name="" id="">
-                                    <option value="">Selecionar</option>
+                                    <option value="" disabled selected>Selecionar</option>
                                     <option value="">BRA</option>
                                     <option value="">ARS</option>
                                     <option value="">USD</option>
