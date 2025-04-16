@@ -1,17 +1,19 @@
-import styles from "../solicitacao/Solicitacao.module.scss"
-import Home from "../../assets/Dashboard/home header.png"
-import Seta from "../../assets/Dashboard/Vector.png"
-import Analises from "../../assets/Dashboard/Análises.png"
-import NavBar from "../navibar/NavBar.jsx"
-import Mais from "../../assets/Solicitacao/+.png"
-import Calendario from "../../assets/Solicitacao/calendario.png"
-import Check from "../../assets/Solicitacao/check.png"
-import Deletar from "../../assets/Solicitacao/deletar.png"
-import Lixeira from "../../assets/Solicitacao/lixeira.png"
-import Motivo from "../../assets/Solicitacao/motivo.png"
-import Baixa from "../../assets/Solicitacao/seta baixa.png"
-import Xs from "../../assets/Solicitacao/x.png"
-import { useState } from "react"
+import styles from "../solicitacao/Solicitacao.module.scss";
+import Home from "../../assets/Dashboard/home header.png";
+import Seta from "../../assets/Dashboard/Vector.png";
+import Analises from "../../assets/Dashboard/Análises.png";
+import NavBar from "../navibar/NavBar.jsx";
+import Mais from "../../assets/Solicitacao/+.png";
+import Calendario from "../../assets/Solicitacao/calendario.png";
+import Check from "../../assets/Solicitacao/check.png";
+import Deletar from "../../assets/Solicitacao/deletar.png";
+import Lixeira from "../../assets/Solicitacao/lixeira.png";
+import Motivo from "../../assets/Solicitacao/motivo.png";
+import Baixa from "../../assets/Solicitacao/seta baixa.png";
+import Xs from "../../assets/Solicitacao/x.png";
+
+import { useState, useEffect } from "react";
+import api from "../../services/Api.jsx"; // importando a função api da pasta services
 
 export default function Solicitacao() {
     const [colaborador, setColaborador] = useState(""); // Estado para o campo colaborador
@@ -33,6 +35,7 @@ export default function Solicitacao() {
 
     const [dadosReembolso, setDadosReembolso] = useState([]); // criou-se um array que irá armazenar esses dados
 
+    // função para capturar os valores dos estados
     const handleSubmit = () => {
         const objetoReembolso = {
             colaborador,
@@ -51,8 +54,59 @@ export default function Solicitacao() {
             valorFaturado,
             despesa
         }
-        setDadosReembolso(dadosReembolso.concat(objetoReembolso))
+        setDadosReembolso(dadosReembolso.concat(objetoReembolso));
+        limparCampos();
+
     };
+
+    // função para capturar os valores dos estados
+    const limparCampos = () => {
+        setColaborador(""),
+        setEmpresa(""),
+        setnPrestacao(""),
+        setDescricao(""),
+        setData(""),
+        setTipoReembolso(""),
+        setCentroCusto(""),
+        setorOrdemInterna(""),
+        setDivisao(""),
+        setPep(""),
+        setMoeda(""),
+        setDistanciaKm(""),
+        setValorKm(""),
+        setValorFaturado(""),
+        setDespesa("")
+    };
+
+    // Função para enviar os dados para API
+
+    const [foiEnviado, setFoiEnviado] = useState(false) //Esse estado serve para saber se o formulário foi enviado.
+
+    // esse async quer dizer que é uma funcao assincrona que ira esperar uma resposta do servidor
+    const enviarParaAnalise = async () => {
+        try {
+            //Const response = O resultado da resposta do servidor
+            // await (esperar) = faz com que o código espere a resposta da API
+            // Api é a nossa
+            //post = é um método que serve para enviar algo para o servidor
+            //                              1º argumento é o caminho da rota, 2º argumento é o que será enviado
+            const response = await Api.post("/refunds/new", dadosReembolso);
+            console.log("Resposta da API", response); // Mostra no console a resposta da API (útil para os desenvolvedores testarem)
+            alert("Reembolso solicitado com sucesso!") // Mostra um alerta avisando que deu certo
+            setFoiEnviado(true)
+
+        } catch (error) {//Caso dê erro na hora de enviar, ele mostra no console.
+            console.log("Erro co enviar", error) // Mostra o erro se algo der errado.
+
+        }
+    };
+
+    useEffect(() => {
+        if (foiEnviado) {
+            setDadosReembolso([]);//Zera o formulário depois do envio
+            setFoiEnviado(false);//Volta a ser o estado original
+        }
+    }, [foiEnviado]);
 
 
     return (
@@ -68,7 +122,7 @@ export default function Solicitacao() {
                     <p>Solicitação de Reembolsos</p>
                 </header>
                 <main className={styles.mainSolicitacao}>
-                    <form className={styles.formSolicitacao} action="" onSubmit={ (e) => e.preventDefault()}>
+                    <form className={styles.formSolicitacao} action="" onSubmit={(e) => e.preventDefault()}>
                         <div className={styles.grupo1}>
                             <div className={styles.inputNome}>
                                 <label htmlFor="">Nome Completo</label>
@@ -124,7 +178,7 @@ export default function Solicitacao() {
 
                             <div className={styles.inputOrdInt}>
                                 <label htmlFor="ordemInterna">Ord. Int.</label>
-                                <input value={ordemInterna} type="text" name="ordemInterna" id=""  onChange={(e) => setorOrdemInterna(e.target.value)} />
+                                <input value={ordemInterna} type="text" name="ordemInterna" id="" onChange={(e) => setorOrdemInterna(e.target.value)} />
                             </div>
 
                             <div className={styles.inputDiv}>
@@ -172,11 +226,12 @@ export default function Solicitacao() {
 
                             <div className={styles.buttonG2}>
                                 <button className={styles.buttonSalvar} type="submit" onClick={handleSubmit} >
-                                    <img src={Mais} alt="" />
+                                    <img src={Mais} alt="Salvar" />
                                     <p>Salvar</p>
                                 </button>
-                                <button className={styles.buttonApagar}>
-                                    <img src={Deletar} alt="" />
+
+                                <button className={styles.buttonApagar} type="submit" onClick={limparCampos} >
+                                    <img src={Deletar} alt="Deletar" />
                                 </button>
                             </div>
                         </div>
@@ -226,9 +281,9 @@ export default function Solicitacao() {
                                         <td>{item.valorKm}</td>
                                         <td>{item.valorFaturado}</td>
                                         <td>{item.despesa}</td>
-                                    </tr>  
-                                ) )} 
-                                
+                                    </tr>
+                                ))}
+
                             </tbody>
                         </table>
 
@@ -248,10 +303,11 @@ export default function Solicitacao() {
                         </div>
                         <div className={styles.mRodape2}>
 
-                            <button className={styles.bEnviar}>
+                            <button onClick={enviarParaAnalise} className={styles.bEnviar} >
                                 <img src={Check} alt="" />
                                 <p>Enviar para Análise</p>
                             </button>
+
                             <button className={styles.bCancel}>
                                 <img src={Xs} alt="" />
                                 <p>Enviar para Análise</p>
