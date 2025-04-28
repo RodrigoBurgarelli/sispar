@@ -53,7 +53,8 @@ export default function Solicitacao() {
             valorKm,
             valorFaturado,
             despesa
-        }
+        };
+
         setDadosReembolso(dadosReembolso.concat(objetoReembolso));
         limparCampos();
 
@@ -66,6 +67,7 @@ export default function Solicitacao() {
         setnPrestacao(""),
         setDescricao(""),
         setData(""),
+        setMotivo(""),
         setTipoReembolso(""),
         setCentroCusto(""),
         setorOrdemInterna(""),
@@ -110,6 +112,7 @@ export default function Solicitacao() {
 
 
     return (
+        
         <div className={styles.divGeralSolicitacao}>
             <NavBar />
 
@@ -230,7 +233,7 @@ export default function Solicitacao() {
                                     <p>Salvar</p>
                                 </button>
 
-                                <button className={styles.buttonApagar} type="submit" onClick={limparCampos} >
+                                <button className={styles.buttonApagar} type="button" onClick={limparCampos} >
                                     <img src={Deletar} alt="Deletar" />
                                 </button>
                             </div>
